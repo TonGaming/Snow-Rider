@@ -1,2 +1,2 @@
 # Snow-Rider
-a short 2D snow skating game that was built mainly for learning basics concepts of game programming.
+A short 2D snow skating game that was built mainly for learning the basic concepts of game programming.
