@@ -1,4 +1,4 @@
-## Snow-Rider
+# Snow-Rider
 This project is a 2D Skating game written using the Unity game engine. This game was built primarily for self-educational purposes with guidance from [this tutorial](https://www.udemy.com/course/unitycourse/)
 
 # Gameplay Features
@@ -14,7 +14,7 @@ This project is a 2D Skating game written using the Unity game engine. This game
 
 - Be careful, if you smack Eddy's head to the ground, Eddy will be seriously injured and not happy at all, so control your flipping! 
 
-# Gameplay Demo
+## Gameplay Demo
 - Video demo:
 [You can watch the demo gameplay here](https://drive.google.com/file/d/1De7B4My6b9uXqwuqZNXwZ41nBEpmDsIF/view?usp=drive_link)https://drive.google.com/file/d/1De7B4My6b9uXqwuqZNXwZ41nBEpmDsIF/view?usp=drive_link
 
@@ -34,7 +34,7 @@ This project is a 2D Skating game written using the Unity game engine. This game
 - ![DemoScreenshot3](https://github.com/LadyKillerr/Snow-Rider/assets/107382099/d0949e1e-5cc3-443e-82f0-91d744cb47c4)
   Uh Oh, got to be careful, Eddy cracks like an egg if his head got crashed into the snow
 
-# Things I learned making this 2D skating game
+## Things I learned making this 2D skating game
 - How to use sprite shapes
 - Setup a basic follow camera using Cinemachine
 - Using Surface Effector2D and Edge Collider
@@ -43,4 +43,4 @@ This project is a 2D Skating game written using the Unity game engine. This game
 - Creating Delays using Invoke
 - Learning the fundamentals of Particles, implementing Audio, and how to trigger them
 - Learn how to use FindObjectOfType and set methods to public to access them from another script.
-# And many many more while getting through making this project...
+### And many many more while getting through making this project...
