@@ -9,7 +9,7 @@ public class TrailEffects : MonoBehaviour
     [SerializeField] AudioClip SnowStep;
     void OnCollisionEnter2D(Collision2D other)
     {
-        GetComponent<AudioSource>().PlayOneShot(SnowStep, 0.5f) ;
+        GetComponent<AudioSource>().PlayOneShot(SnowStep, 0.65f) ;
         // PLaying Audio when touched the ground
         TrailSound.Play();
         TrailEffect.Play();

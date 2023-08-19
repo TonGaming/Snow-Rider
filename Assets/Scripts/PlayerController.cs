@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] ParticleSystem BoostEffect;
@@ -16,8 +18,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float YJump2D = 1f;
     [SerializeField] float JumpForce = 2f;
 
-
-
+    // if the player crashed, they will be locked out of controls using this bool
+    bool canMove = true;
+    // to check if the play flying r not
     bool isGrounded = false;
 
     Rigidbody2D rb2d;
@@ -35,10 +38,23 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AddJump();
-        SpeedPLayer();
-        RotatePlayer();
+        if (canMove == true)
+        {
+            AddJump();
+            SpeedPLayer();
+            RotatePlayer();
 
+        }
+        else
+        {
+            DisableControls();
+        }
+
+    }
+
+    public void DisableControls()
+    {
+        canMove = false;
     }
 
     void AddJump()
@@ -97,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
-            
+
             se2d.speed = fastSpeed;
             BoostEffect.Play();
         }

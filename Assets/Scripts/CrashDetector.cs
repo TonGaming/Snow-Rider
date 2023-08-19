@@ -1,14 +1,16 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 public class CrashDetector : MonoBehaviour
 {
     [SerializeField] float delayTime = 3f;
     [SerializeField] ParticleSystem CrashEffect;
-    bool isFirstCrashed = true;
+    bool hasCrashed = false;
     [SerializeField] AudioClip CrashSFX;
+
     void Start()
     {
 
@@ -17,11 +19,14 @@ public class CrashDetector : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (isFirstCrashed)
+        if (!hasCrashed)
         {
-            GetComponent<AudioSource>().PlayOneShot(CrashSFX, 0.5f);
+            hasCrashed = true;
+            GetComponent<AudioSource>().PlayOneShot(CrashSFX,0.5f);
+            // chạy âm thanh vỡ đầu
             CrashEffect.Play();
-            isFirstCrashed = false;
+            // Khoá controls khi va chạm
+            FindObjectOfType<PlayerController>().DisableControls();
         }
         Invoke("reloadScene", delayTime);
     }
