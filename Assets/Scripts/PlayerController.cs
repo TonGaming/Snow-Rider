@@ -5,17 +5,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float torqueAmount = 12f;
     [SerializeField] ParticleSystem BoostEffect;
     [SerializeField] ParticleSystem BrakeEffect;
+
+    [SerializeField] float torqueAmount = 12f;
     [SerializeField] float fastSpeed = 20f;
     [SerializeField] float slowSpeed = 7f;
     [SerializeField] float defaultSpeed = 10f;
     [SerializeField] float XJump2D = 0f;
     [SerializeField] float YJump2D = 1f;
     [SerializeField] float JumpForce = 2f;
-    [SerializeField] AudioSource SnowStep;
+
+
+
     bool isGrounded = false;
+
     Rigidbody2D rb2d;
     SurfaceEffector2D se2d;
     Vector2 jump;
@@ -34,6 +38,7 @@ public class PlayerController : MonoBehaviour
         AddJump();
         SpeedPLayer();
         RotatePlayer();
+
     }
 
     void AddJump()
@@ -42,8 +47,8 @@ public class PlayerController : MonoBehaviour
         {
             // Hồi còn ngây dại
             rb2d.AddForce(jump * JumpForce, ForceMode2D.Impulse);
-            
-            
+
+
             isGrounded = false;
             // Phương pháp tối ưu
             //if (jumpButton.isPressed)
@@ -54,10 +59,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     // OnCollisionStay2D sets isGrounded to true if player is touching the Surface Effector 2D
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        SnowStep.Play();
-    }
+
     void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -90,9 +92,12 @@ public class PlayerController : MonoBehaviour
 
     void SpeedPLayer()
     {
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
 
+
+
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
+            
             se2d.speed = fastSpeed;
             BoostEffect.Play();
         }
