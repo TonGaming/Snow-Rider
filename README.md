@@ -1,5 +1,5 @@
 # Snow-Rider
-This project is a 2D Skating game written using the Unity game engine. This game was built primarily for self-educational purposes with guidance from [this tutorial](https://www.udemy.com/course/unitycourse/)
+This project is a 2D Skating game written using the Unity game engine. This game was built primarily for self-educational purposes 
 
 # Gameplay Features
 - You are Eddy, a professional stunt puller who has gone through many trials and errors seeking the thrill of life through reckless and dangerous risky sports... 
@@ -15,6 +15,7 @@ This project is a 2D Skating game written using the Unity game engine. This game
 - Be careful, if you smack Eddy's head to the ground, Eddy will be seriously injured and not happy at all, so control your flipping! 
 
 ## Gameplay Demo
+- [Try it out right here!](https://lady-killer.itch.io/snow-ryder)
 - Video demo:
 [You can watch the demo gameplay here](https://drive.google.com/file/d/1De7B4My6b9uXqwuqZNXwZ41nBEpmDsIF/view?usp=drive_link)https://drive.google.com/file/d/1De7B4My6b9uXqwuqZNXwZ41nBEpmDsIF/view?usp=drive_link
 
